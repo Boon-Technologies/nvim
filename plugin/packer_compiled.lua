@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/christian/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/christian/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/christian/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -118,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/christian/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["tree-sitter-vue"] = {
+    loaded = true,
+    path = "/home/christian/.local/share/nvim/site/pack/packer/start/tree-sitter-vue",
+    url = "https://github.com/tree-sitter-grammars/tree-sitter-vue"
   },
   ["vim-airline"] = {
     loaded = true,

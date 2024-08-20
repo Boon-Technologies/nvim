@@ -14,5 +14,6 @@ return require('packer').startup(function(use)
     use { 'akinsho/bufferline.nvim', tag = '*' }
     use { 'catppuccin/nvim', as = 'catppuccin' }
     use { 'akinsho/toggleterm.nvim', tag = 'v2.12.0' }
+    use {'nvim-treesitter/nvim-treesitter',  run = ":TSUpdate" }
 end)
 

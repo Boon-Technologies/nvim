@@ -9,3 +9,9 @@ vim.g.airline_theme = 'angr'
 -- Colorscheme
 vim.cmd [[colorscheme catppuccin-mocha]]
 
+-- Tabs
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+
+-- Disable swap files
+vim.opt.swapfile = false
