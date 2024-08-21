@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["bufferline.nvim"] = {
-    loaded = true,
-    path = "/home/christian/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
-  },
   catppuccin = {
     loaded = true,
     path = "/home/christian/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -88,6 +83,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/christian/.local/share/nvim/site/pack/packer/start/codeium.vim",
     url = "https://github.com/Exafunction/codeium.vim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/christian/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -123,21 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/christian/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["tree-sitter-vue"] = {
-    loaded = true,
-    path = "/home/christian/.local/share/nvim/site/pack/packer/start/tree-sitter-vue",
-    url = "https://github.com/tree-sitter-grammars/tree-sitter-vue"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/home/christian/.local/share/nvim/site/pack/packer/start/vim-airline",
-    url = "https://github.com/vim-airline/vim-airline"
-  },
-  ["vim-airline-themes"] = {
-    loaded = true,
-    path = "/home/christian/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
-    url = "https://github.com/vim-airline/vim-airline-themes"
   },
   ["vim-sensible"] = {
     loaded = true,
