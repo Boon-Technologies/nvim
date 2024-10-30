@@ -1,7 +1,7 @@
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-    ensure_installed = { 'tsserver', 'html', 'volar', 'tailwindcss', 'eslint', 'jsonls', 'lua_ls', 'cssls' },
+    ensure_installed = { 'tsserver', 'html', 'volar', 'tailwindcss', 'eslint', 'jsonls', 'lua_ls', 'cssls', 'jdtls' },
 })
 
 local lspconfig = require('lspconfig')
@@ -57,3 +57,44 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.cssls.setup({})
+
+-- Java language server configuration
+lspconfig.jdtls.setup {
+    cmd = { "jdtls" },
+    root_dir = lspconfig.util.root_pattern(".git", "mvnw", "gradlew", "pom.xml", "build.gradle"),
+    settings = {
+        java = {
+            format = {
+                enabled = true,
+                settings = {
+                    profile = "GoogleStyle" -- Example format profile; change as needed
+                }
+            },
+            contentProvider = { preferred = "fernflower" }, -- Decompiler to use
+            completion = {
+                favoriteStaticMembers = {
+                    "org.hamcrest.MatcherAssert.assertThat",
+                    "org.hamcrest.Matchers.*",
+                    "org.hamcrest.CoreMatchers.*",
+                    "org.junit.jupiter.api.Assertions.*",
+                    "java.util.Objects.requireNonNull",
+                    "java.util.Objects.requireNonNullElse"
+                }
+            },
+            sources = {
+                organizeImports = {
+                    starThreshold = 5,
+                    staticStarThreshold = 3
+                }
+            },
+            codeGeneration = {
+                toString = {
+                    template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}"
+                }
+            }
+        }
+    },
+    init_options = {
+        bundles = {}
+    }
+}
